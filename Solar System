@@ -3,7 +3,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"> </script>
   </head>
   <body>
-    <a-scene background="color: midnightblue">
+    <a-scene>
 <!-- assets -->
       <a-assets>
         <img id="sun" src="sun.jpg">
@@ -11,6 +11,7 @@
         <img id="sparkle" src="rings.png">
         <img id="lava" src="lava.png">
         <img id="vortex" src="vortex.png">
+        <img id="sky" src="space.jpg">
       </a-assets>
 <!--"The Sun" - Planet 01 -->
 <a-sphere 
@@ -33,19 +34,19 @@
         src="#sparkle">
         </a-torus>
         </a-sphere>
-<!-- "The Confusioninator" - Planet 03 -->
-<a-box
-        color="red"
-        position="-1 2 -10"
-        scale="2 2 2"
-        src="#lava">
-        </a-box>
+<!-- "Vortex" - Planet 03 -->
         <a-sphere
         color="yellow"
         position="-1 2 -10"
         scale="1.3 1.3 1.3"
         src="#vortex">
         </a-sphere>
+<!-- SCENE CODE -->
+<a-sky src="#sky"></a-sky>
+<a-light type="point" position="-13 10 -2"></a-light>
+<a-light type="ambient" position="0 0 0" color="darkblue"></a-light>
+<a-light type="point" position="3 0 -3" color="violet"></a-light>
+<!-- de-int -->
     </a-scene>
   </body>
 </html>
